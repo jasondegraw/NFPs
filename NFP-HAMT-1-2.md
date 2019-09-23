@@ -294,68 +294,6 @@ Construction:InternalSources,
        \object-list MaterialName
 ```
 
-### Original Object ###
-```
-Construction:InternalMoistureSource,
-    \memo HeatBalanceAlgorithm = CombinedHeatAndMoistureFiniteElement solution algorithm only.
-    \memo Adds moisture source to selected layer inside the component.
-    \memo Has no effect with other HeatBalanceAlgorithm solution algorithms
-  A1, \field Name
-      \required-field
-      \type alpha
-      \reference MoistureSourceNames	
-  A2, \field Surface Name
-      \required-field
-      \type object-list
-      \object-list SurfaceNames
-      \note Surface Name the moisture source will be added to.
-  N1, \field Source Present In Layer Number
-      \required-field
-      \type integer
-      \minimum 1
-      \maximum 10
-      \note Layer number to which the moisture source should be applied (from outside to inside)
-      \note refers to the list of layers specified for the construction applied to the above surface
-      \note If a source occurs on a layer surface, the layer should be split into two layers (thin where source occurs) and the source added to the thin layer
-  N2, \field Source Type
-      \required-field
-      \type integer
-      \minimum 0
-      \maximum 3
-      \note Type of Moisture Source Calculation
-      \note Source Type 1: User defined input of air flow through component
-      \note Source Type 2: Calculation of dynamic air flow through component due to stack effect and ventilation overpressure (according to Kuenzel, Zirkelbach and Schafazcek 2012)
-      \note Source Type 3: Calculation of dynamic air flow through component with air flow network model
-  N3, \field Air Flow Rate
-      \units m/s
-      \type real
-      \minimum -0.001
-      \maximum 0.001
-      \note Air flux density in m3 per m2 and second.
-      \note Only required for Source Type 1.
-  N4, \field Stack height
-      \units m
-      \type real
-      \minimum 0
-      \maximum 100
-      \note Height of the connected airspace in the building envelope element
-      \note Only required for Source Type 2.
-  N5, \field Component Air Permeance
-      \units m/s
-      \type real
-      \minimum 0
-      \maximum 1
-      \note Moisture specific air permeance of the component in m3 per m2, hour and Pascal.
-      \note Only required for Source Type 2.
-  N6; \field Mechanical Ventilation Overpressure
-      \units Pa
-      \type real
-      \minimum 0
-      \maximum 100
-      \note Constant mechanical ventilation overpressure in Pascal.
-      \note Only required for Source Type 2.
-```
-
 ## Output Details ##
 TBD
 
