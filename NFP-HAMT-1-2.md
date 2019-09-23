@@ -43,7 +43,7 @@ The I/O Reference will be modified to describe the additional moisture source in
 
 ### Modify Existing Object ###
 
-The first option modifies the existing internal sources object to include the needed moisture-related parameters.
+The first option modifies the existing internal sources object to include the needed moisture-related parameters. This is the preferred approach as it makes fewer changes to the IDD.
 
 ```
 Construction:InternalSources,
@@ -298,9 +298,10 @@ Construction:InternalSources,
 TBD
 
 ## Example File and Transition Changes ##
-An example file will be created that demonstrates the new feature.
+An example file will be created or modified to demonstrate the new feature.
 
 ## Discussion and Comments
+TBD
 
 ## References ##
-Holder, Place M, and No P Body. "Air-Handling System Modeling in EnergyPlus: Recommendations for Meeting Stakeholder Needs." 2014. LBNL-6863E.
+NA
