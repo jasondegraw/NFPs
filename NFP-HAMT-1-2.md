@@ -295,7 +295,7 @@ Construction:InternalSources,
 ```
 
 ## Output Details ##
-TBD
+No additional outputs will be added during this phase of the work.
 
 ## Example File and Transition Changes ##
 An example file will be created or modified to demonstrate the new feature.
